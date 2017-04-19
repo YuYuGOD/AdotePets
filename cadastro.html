@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=Cp1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function validaCampo()
+        {
+            if(document.cadastro.nome.value=="")
+            {
+                alert("O Campo nome é obrigatório!");
+                return false;
+            }
+            else
+            if(document.cadastro.email.value=="")
+            {
+                alert("O Campo email é obrigatório!");
+                return false;
+            }
+            else
+            if(document.cadastro.endereco.value=="")
+            {
+                alert("O Campo endereço é obrigatório!");
+                return false;
+            }
+            else
+            if(document.cadastro.cidade.value=="")
+            {
+                alert("O Campo Cidade é obrigatório!");
+                return false;
+            }
+            else
+            if(document.cadastro.login.value=="")
+            {
+                alert("O Campo Login é obrigatório!");
+                return false;
+            }
+            else
+            if(document.cadastro.senha.value=="")
+            {
+                alert("Digite uma senha!");
+                return false;
+            }
+            else
+                return true;
+        }
+        <!-- Fim do JavaScript que validará os campos obrigatórios! -->
+    </script>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php">AdotePets</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.php">Pagina Inicial</a></li>
+            <li><a href="login.html">Login/Cadastrar</a></li>
+            <li><a href="#">Anuncie</a></li>
+            <li><a href="#">Doacoes</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        </ul>
+    </div>
+</nav>
+</nav>
+
+<!-- CADASTRO DE USUARIO -->
+<div class="panel-title"><img src="image/crielogin.jpg" style="margin-left: 500px; width: 500px; height:200px;"/></div>
+</div>
+<div class="panel-body" >
+    <form method="POST" action="cadastro.php" class="form-horizontal" onsubmit="return validaCampo(); return false;">
+
+        <div id="signupalert" style="display:none" class="alert alert-danger">
+            <p>Erro:</p>
+            <span></span>
+        </div>
+        <div class="form-group">
+
+            <label class="col-md-3 control-label">Nome</label>
+            <div class="col-md-9">
+                <input name="nome" type="text" id="nome" size="70" maxlength="60" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Login</label>
+            <div class="col-md-9">
+                <input name="login" type="text" id="login" maxlength="12" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Senha</label>
+            <div class="col-md-9">
+                <input name="senha" type="password" id="senha" maxlength="12" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-9">
+                <td>DDD:</td>
+                <td><input name="ddd" type="text" id="ddd" size="4" maxlength="2" />
+                    Telefone:
+                    <input name="telefone" type="text" id="telefone" />
+                    <span class="style3">Apenas n&uacute;meros</span></td>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Endereco</label>
+            <div class="col-md-9">
+                <input name="endereco" type="text" id="endereco" size="70" maxlength="70" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Cidade</label>
+            <div class="col-md-9">
+                <input name="cidade" type="text" id="cidade" maxlength="20" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">E-mail</label>
+            <div class="col-md-9">
+                <input name="email" type="text" id="email" size="70" maxlength="60" placeholder="exemplo@gmail.com">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-9">
+                <input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar">
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+
+            <!--<div class="col-md-offset-3 col-md-9">
+                <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Cadastre-se com o Facebook</button>
+            </div>-->
+            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="login.html" onclick="$('#signupbox').hide(); $('#loginbox').show()">Voltar a tela de Login</a></div>
+
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
