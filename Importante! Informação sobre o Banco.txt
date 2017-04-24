@@ -1,2 +1,2 @@
 Alterar o arquivo conexao.php na variavel $senha, de acordo com o seu servidor.
-obrigado e pau no cu do douglas.
+Obrigado e pau no cu do douglas.
