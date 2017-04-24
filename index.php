@@ -38,7 +38,7 @@
     
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Adote Pets</h1>      
+      <img src="image/logo3.png" style="center">
     <p></p>
   </div>
 </div>
