@@ -2,4 +2,6 @@ Alterar o arquivo conexao.php na variavel $senha,
 de acordo com o seu servidor.
 
 
+Criar novo banco pelo scrip adotepetsbanco1.1
+
 Obrigado e pau no cu do douglas.
