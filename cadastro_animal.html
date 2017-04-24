@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro</title>
+    <title>Cadastro de Animal</title>
     <meta http-equiv="Content-Type" content="text/html; charset=Cp1252">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -13,36 +13,46 @@
     <script type="text/javascript">
         function validaCampo()
         {
-            if(document.cadastro.nome.value=="")
+            if(document.cadastro_animal.tipo.value=="")
             {
-                alert("O Campo nome é obrigatório!");
+                alert("O Campo Tipo é obrigatório!");
                 return false;
             }
             else
-            if(document.cadastro.email.value=="")
+            if(document.cadastro_animal.nome.value=="")
             {
-                alert("O Campo email é obrigatório!");
+                alert("O Campo Nome é obrigatório!");
                 return false;
             }
-            if(document.cadastro.senha.value=="")
+            if(document.cadastro_animal.raca.value=="")
             {
-                alert("Digite uma senha!");
+                alert("O campo Raça é obrigatório!");
                 return false;
             }
-            if(document.cadastro.cidade.value=="")
+            if(document.cadastro_animal.sexo.value=="")
             {
-                alert("O Campo Cidade é obrigatório!");
+                alert("O Campo Sexo é obrigatório!");
                 return false;
             }
-            if(document.cadastro.telefone.value=="")
+            if(document.cadastro_animal.porte.value=="")
             {
-                alert("O Campo Telefone é obrigatório!");
+                alert("O Campo Porte é obrigatório!");
                 return false;
             }
             else
-            if(document.cadastro.estado.value=="")
+            if(document.cadastro_animal.idade.value=="")
             {
-                alert("O Campo Estado é obrigatório!");
+                alert("O Campo Idade é obrigatório!");
+                return false;
+            }
+            if(document.cadastro_animal.foto.value=="")
+            {
+                alert("O Campo Foto é obrigatório!");
+                return false;
+            }
+            if(document.cadastro_animal.descricao.value=="")
+            {
+                alert("O Campo Descrição é obrigatório!");
                 return false;
             }
             else
@@ -74,11 +84,11 @@
 </nav>
 </nav>
 
-<!-- CADASTRO DE USUARIO -->
+<!-- CADASTRO DE ANIMAL -->
 <div class="panel-title"><img src="image/crielogin.jpg" style="margin-left: 500px; width: 500px; height:200px;"/></div>
 </div>
 <div class="panel-body" >
-    <form method="POST" action="cadastro.php" class="form-horizontal" onsubmit="return validaCampo(); return false;">
+    <form method="POST" action="cadastro_animal.php" class="form-horizontal" onsubmit="return validaCampo(); return false;">
 
         <div id="signupalert" style="display:none" class="alert alert-danger">
             <p>Erro:</p>
@@ -86,39 +96,51 @@
         </div>
         <div class="form-group">
 
+            <label class="col-md-3 control-label">Tipo</label>
+            <div class="col-md-9">
+                <input name="tipo" type="text" id="tipo" size="70" maxlength="60" />
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-md-3 control-label">Nome</label>
             <div class="col-md-9">
-                <input name="nome" type="text" id="nome" size="70" maxlength="60" />
+                <input name="nome" type="text" id="nome" size="70" maxlength="60" >
             </div>
         </div>
         <div class="form-group">
-            <label class="col-md-3 control-label">E-mail</label>
+            <label class="col-md-3 control-label">Raça</label>
             <div class="col-md-9">
-                <input name="email" type="text" id="email" size="70" maxlength="60" placeholder="exemplo@gmail.com">
+                <input name="raca" type="text" id="raca" maxlength="12" />
             </div>
         </div>
         <div class="form-group">
-            <label class="col-md-3 control-label">Senha</label>
+            <label class="col-md-3 control-label">Sexo</label>
             <div class="col-md-9">
-                <input name="senha" type="password" id="senha" maxlength="12" />
+                <input name="sexo" type="text" id="sexo" size="70" maxlength="70" />
             </div>
         </div>
         <div class="form-group">
-            <label class="col-md-3 control-label">Cidade</label>
+            <label class="col-md-3 control-label">Porte</label>
             <div class="col-md-9">
-                <input name="cidade" type="text" id="cidade" size="70" maxlength="70" />
+                <input name="porte" type="text" id="porte" size="70" maxlength="70" />
             </div>
         </div>
         <div class="form-group">
-            <label class="col-md-3 control-label">Telefone</label>
+            <label class="col-md-3 control-label">Idade</label>
             <div class="col-md-9">
-                <input name="telefone" type="text" id="telefone" size="20" maxlength="70" placeholder="(xx)xxxx-xxxx" />
+                <input name="idade" type="text" id="idade" size="70" maxlength="70" />
             </div>
         </div>
         <div class="form-group">
-            <label class="col-md-3 control-label">Estado</label>
+            <label class="col-md-3 control-label">Foto</label>
             <div class="col-md-9">
-                <input name="estado" type="text" id="estado" size="70" maxlength="70" />
+                <input name="foto" type="file" id="foto"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Descrição</label>
+            <div class="col-md-9">
+                <textarea name="descricao" id="descricao" rows="10" cols="70" maxlength="500"></textarea></p>
             </div>
         </div>
         <div class="form-group">
