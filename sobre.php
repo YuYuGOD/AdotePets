@@ -54,7 +54,7 @@
                 <h3 class="text-center">Pedro Meneghini</h3>
             </div>
             <div class="col-md-3">
-                <img src="image\pablo123.jpg" class="center-block img-circle img-responsive">
+                <img src="image\pablo.jpg" class="center-block img-circle img-responsive">
                 <h3 class="text-center">Pablo Pereira</h3>
             </div>
             <div class="col-md-3">
