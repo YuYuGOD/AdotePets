@@ -11,41 +11,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<style>
-    .navbar {
-        margin-bottom: 50px;
-        border-radius: 0;
-    }
-    .jumbotron {
-        margin-bottom: 0;
-    }
-    footer {
-        background-color: #f2f2f2;
-        padding: 25px;
-    }
-</style>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">AdotePets</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Pagina Inicial</a></li>
-            <li><a href="login.html">Login/Cadastrar</a></li>
-            <li><a href="cadastro_animal.html">Anuncie</a></li>
-            <li><a href="doacoes.php">Doacoes</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        </ul>
-    </div>
-</nav>
-</nav>
-</div>
+<?php include("header.php") ?>
 <div class="container">
     <div align="center">
-    <img src="image/logo2.png" style="">
+        <img src="image/logo2.png" style="">
     </div>
 </div>
 
