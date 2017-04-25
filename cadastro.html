@@ -11,43 +11,35 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        function validaCampo()
-        {
-            if(document.cadastro.nome.value=="")
-            {
+        function validaCampo() {
+            if (document.cadastro.nome.value == "") {
                 alert("O Campo nome é obrigatório!");
                 return false;
             }
-            else
-            if(document.cadastro.email.value=="")
-            {
+            else if (document.cadastro.email.value == "") {
                 alert("O Campo email é obrigatório!");
                 return false;
             }
-            if(document.cadastro.senha.value=="")
-            {
+            if (document.cadastro.senha.value == "") {
                 alert("Digite uma senha!");
                 return false;
             }
-            if(document.cadastro.cidade.value=="")
-            {
+            if (document.cadastro.cidade.value == "") {
                 alert("O Campo Cidade é obrigatório!");
                 return false;
             }
-            if(document.cadastro.telefone.value=="")
-            {
+            if (document.cadastro.telefone.value == "") {
                 alert("O Campo Telefone é obrigatório!");
                 return false;
             }
-            else
-            if(document.cadastro.estado.value=="")
-            {
+            else if (document.cadastro.estado.value == "") {
                 alert("O Campo Estado é obrigatório!");
                 return false;
             }
             else
                 return true;
-
+        }
+        
 function mascara(o,f){
     v_obj=o
     v_fun=f
@@ -65,14 +57,20 @@ function mtel(v){
 function id( el ){
 	return document.getElementById( el );
 }
-window.onload = function(){
-	id('telefone').onkeypress = function(){
-		mascara( this, mtel );
-	}
+window.onload = function() {
+    id('telefone').onkeypress = function () {
+        mascara(this, mtel);
+    }
 }
-        }
         <!-- Fim do JavaScript que validará os campos obrigatórios! -->
     </script>
+    <style>
+        .botao {
+            background: url('image/btn_cadastrar.png');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        </style>
 </head>
 
 <body>
@@ -145,7 +143,9 @@ window.onload = function(){
         <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-9">
-                <input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar">
+                <div class="button"></div>
+                <input type="submit" value="                        " id="cadastrar" name="cadastrar" class="botao">
+                </div>
             </div>
         </div>
 
