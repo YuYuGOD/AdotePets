@@ -4,8 +4,12 @@ session_start(); // Inicia a session
 
 include "conexao.php";
 
-$usuario = $_POST['email'];
-$senha = $_POST['senha'];
+if (isset($_POST['email'])) {
+    $email = $_POST['email'];
+}
+if (isset($_POST['senha'])) {
+    $senha = $_POST['senha'];
+}
 
 if ((!$usuario) || (!$senha)){
 
@@ -17,11 +21,10 @@ if ((!$usuario) || (!$senha)){
 
     $senha = md5($senha);
 
-    $sql = mysqli_query(
-
+    $sql = mysqli_query($conn,
         "SELECT * FROM usuario
-WHERE usuario='{$usuario}'
-AND senha='{$senha}'"
+     WHERE email='{$email}'
+     AND senha='{$senha}'"
 
     );
 
