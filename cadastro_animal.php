@@ -18,14 +18,14 @@ $cadastro_animal = mysqli_query($conn, $cadastro_animal);
 
 if(mysqli_affected_rows($conn) != 0){
     echo "
-                    <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/AdotePets/cadastro_animal.html'>
+                    <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/AdotePets/doacoes.php'>
                     <script type=\"text/javascript\">
                         alert(\"Animal cadastrado com Sucesso.\");
                     </script>
                 ";
 }else{
     echo "
-                    <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/AdotePets/cadastro_animal.html'>
+                    <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/AdotePets/formulario_animal.php'>
                     <script type=\"text/javascript\">
                         alert(\"O Animal não foi cadastrado com Sucesso.\");
                     </script>

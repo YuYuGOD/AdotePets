@@ -1,86 +1,165 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
-<html>
-<head>
-</head>
-<body>
-<?php include("header.php") ?>
-<div class="container">
-    <div align="center">
-        <img src="image/logo2.png" style="">
-    </div>
-</div>
+<?php include("header.php"); ?>
 
 
-<div class="container-fluid">
-    <div id="loginbox" style="margin-top:auto;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-        <div class="panel panel-info" >
-            <div class="panel-heading">
-                <div class="panel-title">AdotePets | Login</div>
-                <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Esqueceu a senha?</a></div>
+    <div class="container" style="margin-top: 30px;">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-2">
+                <h4>Tipo</h4>
+                <hr>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="categorias.php?id=1">Cachorros</a></li>
+                    <?php
+                    $arr = array(1, 2, 3, 4);
+                    foreach ($arr as & $value) {
+                        $value = $value * 2;
+                    }
+                    unset($value);
+                    ?>
+                    <li><a href="#">Gatos</a></li>
+                </ul>
             </div>
 
-            <div style="padding-top:30px" class="panel-body" >
+            <div class="col-sm-12 col-md-10">
+                <h4>Produtos</h4>
+                <hr>
 
-                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                <div>
 
-                <form id="loginform" action="login.php" method="post" class="form-horizontal" role="form">
+                    <div class="row">
 
-                    <div style="margin-bottom: 25px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login_email" type="text" class="form-control" name="email" value="" placeholder="Usuario">
-                    </div>
-
-                    <div style="margin-bottom: 25px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login_senha" type="password" class="form-control" name="senha"  placeholder="Senha">
-                    </div>
-
-
-
-                    <div class="input-group">
-                        <div class="checkbox">
-                            <label>
-                                <input id="login-remember" type="checkbox" name="remember" value="1"> Lembrar
-                            </label>
-                        </div>
-                    </div>
-
-                    <div style="margin-top:10px" class="form-group">
-                        <!-- Button -->
-
-                        <div class="col-sm-12 controls">
-                            <input type="submit" class="btn btn-success" value="Login"/>
-                            <a id="btn-fblogin" href="#" class="btn btn-primary">Login com Facebook</a>
-
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <div class="col-md-12 control">
-                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
-                                Ainda nao tem uma conta!
-                                <a href="cadastro.html" onClick="$('#loginbox').hide(); $('#signupbox').show()">
-                                    Crie uma agora.
-                                </a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="assets/produtos/1.png">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="produto.php?id=1" class="btn btn-primary" role="button">Comprar</a></p>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="assets/produtos/2.png" alt="...">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="assets/produtos/3.png" alt="...">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="assets/produtos/4.png" alt="...">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="assets/produtos/1.png">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="assets/produtos/2.png" alt="...">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="assets/produtos/3.png" alt="...">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="assets/produtos/4.png" alt="...">
+                                <div class="caption">
+                                    <h3>Thumbnail label</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </form>
 
+                </div>
 
+                <!-- PAGINADOR -->
+
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#">11</a></li>
+                        <li><a href="#">12</a></li>
+
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
             </div>
-        </div>
-    </div>
-    </form>
 
-    <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-            </div>
+
+
         </div>
+
     </div>
-</div>
-</body>
-</html>
+
+
+
+
+<?php include("footer.php"); ?>

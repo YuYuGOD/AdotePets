@@ -46,8 +46,8 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php">Inicio</a></li>
-                <li><a href="#">Anunciar</a></li>
-                <li><a href="#">Doações</a></li>
+                <li><a href="formulario_animal.php">Anunciar</a></li>
+                <li><a href="doacoes.php">Doações</a></li>
                 <li><a href="sobre.php">Sobre</a></li>
                 <!--
                 <li class="dropdown">
@@ -70,7 +70,7 @@
                 </div>
                 <button type="submit" class="btn btn-success">Entrar</button>
                 <div class="form-group">
-                        <a href="fazer_login.php"><button type="button" class="btn btn-danger">Cadastrar</button></a>
+                        <a href="formulario_usuario.php"><button type="button" class="btn btn-danger">Cadastrar</button></a>
                 </div>
             </form>
         </div>

@@ -11,7 +11,7 @@ if ((!$usuario) || (!$senha)){
 
     echo "Por favor, todos campos devem ser preenchidos! <br /><br />";
 
-    include "cadastro.html";
+    include "formulario_usuario.php";
 
 }else{
 
@@ -58,7 +58,7 @@ WHERE usuario_id ='{$id_usuario}'"
         echo "Você não pode logar-se! Este usuário e/ou senha não são válidos!<br />
 Por favor tente novamente!<br />";
 
-        include "cadastro.html";
+        include "formulario_usuario.php";
 
     }
 

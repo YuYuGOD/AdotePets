@@ -4,7 +4,7 @@ function session_checker(){
 
     if (!isset($_SESSION['usuario_id'])){
 
-        header ("Location: cadastro.html");
+        header ("Location: formulario_usuario.php");
         exit();
 
     }

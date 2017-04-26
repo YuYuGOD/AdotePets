@@ -36,7 +36,7 @@
 <footer class="container-fluid text-center">
   <p>AdotePets Copyright</p>  
   <form class="form-inline">Cadastre-se Agora!:
-   <a href="cadastro.html" ><button type="button" class="btn btn-danger">Cadastre-se</button>
+   <a href="formulario_usuario.php" ><button type="button" class="btn btn-danger">Cadastre-se</button>
   </form>
 </footer>
     <!-- END FOOTER -->

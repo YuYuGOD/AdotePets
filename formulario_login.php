@@ -24,28 +24,12 @@
         padding: 25px;
     }
 </style>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">AdotePets</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Pagina Inicial</a></li>
-            <li><a href="login.html">Login/Cadastrar</a></li>
-            <li><a href="cadastro_animal.html">Anuncie</a></li>
-            <li><a href="doacoes.php">Doacoes</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        </ul>
-    </div>
-</nav>
+<?php include("header.php"); ?>
 </nav>
 </div>
 <div class="container">
     <div align="center">
-    <img src="image/logo2.png" style="">
+        <img src="image/logo2.png" style="">
     </div>
 </div>
 
@@ -99,7 +83,7 @@
                         <div class="col-md-12 control">
                             <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
                                 Ainda nao tem uma conta!
-                                <a href="cadastro.html" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                <a href="formulario_usuario.php" onClick="$('#loginbox').hide(); $('#signupbox').show()">
                                     Crie uma agora.
                                 </a>
                             </div>

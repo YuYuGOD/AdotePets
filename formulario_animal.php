@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -72,23 +72,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">AdotePets</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Pagina Inicial</a></li>
-            <li><a href="login.html">Login/Cadastrar</a></li>
-            <li><a href="cadastro_animal.html">Anuncie</a></li>
-            <li><a href="doacoes.php">Doacoes</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        </ul>
-    </div>
-</nav>
+<?php include("header.php"); ?>
 </nav>
 
 <!-- CADASTRO DE ANIMAL -->
@@ -167,7 +151,7 @@
             <!--<div class="col-md-offset-3 col-md-9">
                 <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Cadastre-se com o Facebook</button>
             </div>-->
-            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="login.html" onclick="$('#signupbox').hide(); $('#loginbox').show()">Voltar a tela de Login</a></div>
+            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="formulario_login.php" onclick="$('#signupbox').hide(); $('#loginbox').show()">Voltar a tela de Login</a></div>
 
         </div>
     </form>
