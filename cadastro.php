@@ -7,7 +7,7 @@ $cidade = $_POST['cidade'];
 $telefone = $_POST['telefone'];
 $estado = $_POST['estado'];
 
-//echo "$nome_usuario - $email_usuario";
+//echo "$nome - $email";
 
 $cadastro = "INSERT INTO usuario ( nome , email , senha , cidade, telefone, estado) 
 VALUES ('$nome', '$email', '$senha', '$cidade', '$telefone','$estado')";

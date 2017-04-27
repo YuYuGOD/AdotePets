@@ -10,60 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript">
-        function validaCampo() {
-            if (document.cadastro.nome.value == "") {
-                alert("O Campo nome é obrigatório!");
-                return false;
-            }
-            else if (document.cadastro.email.value == "") {
-                alert("O Campo email é obrigatório!");
-                return false;
-            }
-            if (document.cadastro.senha.value == "") {
-                alert("Digite uma senha!");
-                return false;
-            }
-            if (document.cadastro.cidade.value == "") {
-                alert("O Campo Cidade é obrigatório!");
-                return false;
-            }
-            if (document.cadastro.telefone.value == "") {
-                alert("O Campo Telefone é obrigatório!");
-                return false;
-            }
-            else if (document.cadastro.estado.value == "") {
-                alert("O Campo Estado é obrigatório!");
-                return false;
-            }
-            else
-                return true;
-        }
-
-        function mascara(o,f){
-            v_obj=o
-            v_fun=f
-            setTimeout("execmascara()",1)
-        }
-        function execmascara(){
-            v_obj.value=v_fun(v_obj.value)
-        }
-        function mtel(v){
-            v=v.replace(/D/g,"");             //Remove tudo o que não é dígito
-            v=v.replace(/^(d{2})(d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-            v=v.replace(/(d)(d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
-            return v;
-        }
-        function id( el ){
-            return document.getElementById( el );
-        }
-        window.onload = function() {
-            id('telefone').onkeypress = function () {
-                mascara(this, mtel);
-            }
-        }
-        <!-- Fim do JavaScript que validará os campos obrigatórios! -->
-    </script>
+    <!-- Fim do JavaScript que validará os campos obrigatórios! -->
     <style>
         .botao {
             background: url('image/btn_cadastrar.png');
@@ -71,6 +18,7 @@
             background-repeat: no-repeat;
         }
     </style>
+
 </head>
 
 <body>
@@ -81,7 +29,7 @@
 <div class="panel-title"><img src="image/img_crieseuperfil.png" style="margin-left: 450px; width: 500px; height:200px;"/></div>
 </div>
 <div class="panel-body" >
-    <form method="POST" action="cadastro.php" class="form-horizontal" onsubmit="return validaCampo(); return false;">
+    <form onsubmit="return valida(this);" method="POST" action="cadastro.php" class="form-horizontal">
 
         <div id="signupalert" style="display:none" class="alert alert-danger">
             <p>Erro:</p>
@@ -91,37 +39,37 @@
 
             <label class="col-md-3 control-label">Nome</label>
             <div class="col-md-9">
-                <input name="nome" type="text" id="nome" size="70" maxlength="60" />
+                <input name="nome" type="text" id="nome" size="70" maxlength="60" required />
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">E-mail</label>
             <div class="col-md-9">
-                <input name="email" type="text" id="email" size="70" maxlength="60" placeholder="exemplo@gmail.com">
+                <input name="email" type="email" id="email" size="70" maxlength="60" placeholder="exemplo@gmail.com" required>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Senha</label>
             <div class="col-md-9">
-                <input name="senha" type="password" id="senha" maxlength="12" />
+                <input name="senha" type="password" id="senha" maxlength="12" required/>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Cidade</label>
             <div class="col-md-9">
-                <input name="cidade" type="text" id="cidade" size="70" maxlength="70" />
+                <input name="cidade" type="text" id="cidade" size="70" maxlength="70" required/>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Telefone</label>
             <div class="col-md-9">
-                <input name="telefone" type="text" id="telefone" size="20" maxlength="70" placeholder="(xx)xxxx-xxxx" />
+                <input type="tel" required="required" maxlength="15" name="telefone" id="telefone"  />
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Estado</label>
             <div class="col-md-9">
-                <input name="estado" type="text" id="estado" size="70" maxlength="70" />
+                <input name="estado" type="text" id="estado" size="70" maxlength="70" required/>
             </div>
         </div>
         <div class="form-group">

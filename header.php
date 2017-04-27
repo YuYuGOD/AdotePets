@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 
+
     <title>ADOTEPETS</title>
 
     <!-- Bootstrap core CSS -->
@@ -27,9 +28,11 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
+
 
 <!-- Fixed navbar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -61,16 +64,16 @@
                 </li>
                  -->
             </ul>
-            <form class="navbar-form navbar-right">
+            <form action="login.php" method="post" class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
+                    <input type="text" name="email" placeholder="Email" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Senha" class="form-control">
+                    <input type="password" name="senha" placeholder="Senha" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">Entrar</button>
                 <div class="form-group">
-                        <a href="formulario_usuario.php"><button type="button" class="btn btn-danger">Cadastrar</button></a>
+                    <a href="formulario_usuario.php"><button type="button" class="btn btn-danger">Cadastrar</button></a>
                 </div>
             </form>
         </div>

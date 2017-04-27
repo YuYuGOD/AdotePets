@@ -19,19 +19,6 @@
 
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<style> 
-    .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
-    }
-     .jumbotron {
-      margin-bottom: 0;
-    }
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-  </style> 
 </head>
 <body>
     <?php include("header.php"); ?>

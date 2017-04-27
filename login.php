@@ -1,70 +1,26 @@
 <?php
 
-session_start(); // Inicia a session
+$femail = $_POST['email'];
+$fsenha = $_POST['senha'];
 
-include "conexao.php";
+include("conexao.php");
 
-if (isset($_POST['email'])) {
-    $email = $_POST['email'];
-}
-if (isset($_POST['senha'])) {
-    $senha = $_POST['senha'];
-}
+$sql = "SELECT *
+FROM usuario
+WHERE email = '$femail' 
+AND senha = '$fsenha';";
 
-if ((!$usuario) || (!$senha)){
+$resultado = mysqli_query($conn, $sql);
 
-    echo "Por favor, todos campos devem ser preenchidos! <br /><br />";
+if (mysqli_num_rows($resultado) > 0) {
+    session_start();
+    $_SESSION['email'] = $email;
+    $_SESSION['senha'] = $senha;
+    header("Location: doacoes.php");
+} else {
 
-    include "formulario_usuario.php";
-
-}else{
-
-    $senha = md5($senha);
-
-    $sql = mysqli_query($conn,
-        "SELECT * FROM usuario
-     WHERE email='{$email}'
-     AND senha='{$senha}'"
-
-    );
-
-    $login_check = mysqli_num_rows($sql);
-
-    if ($login_check > 0){
-
-        while ($row = mysqli_fetch_array($sql)){
-
-            foreach ($row AS $key => $val){
-
-                $$key = stripslashes( $val );
-
-            }
-
-            $_SESSION['id_usuario'] = $id_usuario;
-            $_SESSION['nome'] = $nome;
-            $_SESSION['sobrenome'] = $sobrenome;
-            $_SESSION['email'] = $email;
-
-            mysqli_query(
-
-                "UPDATE usuario SET data_ultimo_login = now()
-WHERE usuario_id ='{$id_usuario}'"
-
-            );
-
-            header("Location: area_restrita.php");
-
-        }
-
-    }else{
-
-        echo "Você não pode logar-se! Este usuário e/ou senha não são válidos!<br />
-Por favor tente novamente!<br />";
-
-        include "formulario_usuario.php";
-
-    }
+    die("nao logado");
+    header('location:index.php');
 
 }
-
 ?>
