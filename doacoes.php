@@ -1,4 +1,6 @@
-<?php include("header.php"); ?>
+<?php
+include("header.php");
+?>
 
 
     <div class="container" style="margin-top: 30px;">
@@ -22,137 +24,32 @@
             </div>
 
             <div class="col-sm-12 col-md-10">
-                <h4>Produtos</h4>
+                <h4>Animais</h4>
                 <hr>
 
-                <div>
+                <?php
 
-                    <div class="row">
+                include_once("conexao.php");
 
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="assets/produtos/1.png">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="produto.php?id=1" class="btn btn-primary" role="button">Comprar</a></p>
-                                </div>
-                            </div>
+                $sql = "SELECT * FROM animal;";
+
+                $resultado = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($resultado) > 0) {
+                  while($row = $resultado->fetch_assoc()) {?>
+                  <div class="row">
+                      <div class="col-sm-4">
+                        <div class="panel panel-primary">
+                          <div class="panel-heading"><?php echo $row['nome']?></div>
+                          <div  class="panel-body"><img src="./<?php echo $row['foto_url']?>" class="img-responsive" style="width:100%" alt=""/></div>
+                          <div class="panel-footer"><?php echo $row['descricao']?>  </div>
                         </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="assets/produtos/2.png" alt="...">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="assets/produtos/3.png" alt="...">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a> </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="assets/produtos/4.png" alt="...">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a> </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="assets/produtos/1.png">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="assets/produtos/2.png" alt="...">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a> </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="assets/produtos/3.png" alt="...">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a> </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
-                                <img src="assets/produtos/4.png" alt="...">
-                                <div class="caption">
-                                    <h3>Thumbnail label</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
+                      </div>
                 </div>
-
-                <!-- PAGINADOR -->
-
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li><a href="#">11</a></li>
-                        <li><a href="#">12</a></li>
-
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <?php }
+                }?>
 
             </div>
-
 
 
         </div>

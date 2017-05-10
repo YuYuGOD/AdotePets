@@ -35,7 +35,7 @@
 
 
 <!-- Fixed navbar -->
-<nav class="navbar navbar-light navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
 
     <div class="container">
         <div class="navbar-header">

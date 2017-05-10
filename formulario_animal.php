@@ -101,7 +101,7 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
 </div>
 </div>
 <div class="panel-body" >
-    <form method="POST" action="cadastro_animal.php" class="form-horizontal" onsubmit="return validaCampo(); return false;">
+    <form method="POST" action="cadastro_animal.php" onsubmit="return validaCampo(); return false;">
 
         <div id="signupalert" style="display:none" class="alert alert-danger">
             <p>Erro:</p>
