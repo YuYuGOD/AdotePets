@@ -101,7 +101,7 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
 </div>
 </div>
 <div class="panel-body" >
-    <form method="POST" action="cadastro_animal.php" onsubmit="return validaCampo(); return false;">
+    <form method="POST" action="cadastro_animal.php" onsubmit="return validaCampo(); return false;" enctype="multipart/form-data"   >
 
         <div id="signupalert" style="display:none" class="alert alert-danger">
             <p>Erro:</p>
@@ -144,7 +144,7 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
                 <input name="idade" type="text" id="idade" size="70" maxlength="70" />
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" >
             <label class="col-md-3 control-label">Foto</label>
             <div class="col-md-9">
                 <input name="foto" type="file" id="foto"/>

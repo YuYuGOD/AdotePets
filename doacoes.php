@@ -37,8 +37,9 @@ include("header.php");
 
                 if (mysqli_num_rows($resultado) > 0) {
                   while($row = $resultado->fetch_assoc()) {?>
-                  <div class="row">
-                      <div class="col-sm-4">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
                         <div class="panel panel-primary">
                           <div class="panel-heading"><?php echo $row['nome']?></div>
                           <div  class="panel-body"><img src="./<?php echo $row['foto_url']?>" class="img-responsive" style="width:100%" alt=""/></div>
