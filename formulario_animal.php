@@ -102,52 +102,84 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
 </div>
 <div class="panel-body" >
     <form method="POST" action="cadastro_animal.php" onsubmit="return validaCampo(); return false;" enctype="multipart/form-data"   >
-
         <div id="signupalert" style="display:none" class="alert alert-danger">
             <p>Erro:</p>
             <span></span>
         </div>
         <div class="form-group">
+            <label class="col-md-3 control-label">Telefone Contato</label>
+            <div class="col-md-9">
+                <input name="telefone_animal" type="text" id="telefone_animal" size="20" maxlength="60" />
+            </div>
+          </div>
 
+        <div class="form-group">
             <label class="col-md-3 control-label">Tipo</label>
             <div class="col-md-9">
-                <input name="tipo" type="text" id="tipo" size="70" maxlength="60" />
+                <select name="tipo" id="tipo" maxlength="80" >
+                    <option value="">Selecione</option>
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Gato">Gato</option>
+                </select>
+                <br>
+                <br>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Nome</label>
             <div class="col-md-9">
-                <input name="nome" type="text" id="nome" size="70" maxlength="60" >
+                <input name="nome" type="text" id="nome" maxlength="25" >
+                <br>
+                <br>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Raça</label>
             <div class="col-md-9">
                 <input name="raca" type="text" id="raca" maxlength="12" />
+                <br>
+                <br>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Sexo</label>
             <div class="col-md-9">
-                <input name="sexo" type="text" id="sexo" size="70" maxlength="70" />
+
+                <select name="sexo" id="sexo" maxlength="80" >
+                    <option value="">Selecione</option>
+                    <option value="Macho">Macho</option>
+                    <option value="Femea">Femea</option>
+                </select>
+                <br>
+                <br>
             </div>
-        </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Porte</label>
             <div class="col-md-9">
-                <input name="porte" type="text" id="porte" size="70" maxlength="70" />
+                <select name="porte" id="porte" maxlength="80" >
+                    <option value="">Selecione</option>
+                    <option value="Grande">Grande</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Pequeno">Pequeno</option>
+                </select>
+                <br>
+                <br>
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-3 control-label">Idade</label>
             <div class="col-md-9">
-                <input name="idade" type="text" id="idade" size="70" maxlength="70" />
+                <input name="idade" type="number" id="idade" maxlength="80" >
+                <br>
+                <br>
             </div>
         </div>
         <div class="form-group" >
             <label class="col-md-3 control-label">Foto</label>
             <div class="col-md-9">
                 <input name="foto" type="file" id="foto"/>
+                <br>
+                <br>
             </div>
         </div>
         <div class="form-group">

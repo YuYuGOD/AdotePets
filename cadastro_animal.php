@@ -1,5 +1,6 @@
 <?php
 include_once("conexao.php");
+$telefone_animal = $_POST['telefone_animal'];
 $tipo = $_POST['tipo'];
 $nome = $_POST['nome'];
 $raca = $_POST['raca'];
@@ -55,8 +56,8 @@ if ($_UP['renomeia'] == true) {
 // Depois verifica se é possível mover o foto para a pasta escolhida
 if (move_uploaded_file($_FILES['foto']['tmp_name'], $_UP['pasta'] . $nome_final)) {
   $foto_url = $_UP['pasta'] . $nome_final;
-  $cadastro_animal = "INSERT INTO animal ( tipo , nome , raca , sexo, porte, idade, foto_url, descricao)
-  VALUES ('$tipo', '$nome', '$raca', '$sexo', '$porte','$idade','$foto_url', '$descricao')";
+  $cadastro_animal = "INSERT INTO animal (telefone_animal, tipo , nome , raca , sexo, porte, idade, foto_url, descricao)
+  VALUES ('$telefone_animal', '$tipo', '$nome', '$raca', '$sexo', '$porte','$idade','$foto_url', '$descricao')";
 
   $cadastro_animal = mysqli_query($conn, $cadastro_animal);
 

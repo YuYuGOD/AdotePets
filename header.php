@@ -1,3 +1,29 @@
+<?php
+    include 'conexao.php';
+
+/*
+    if (isset($_POST["email"]) && isset($_POST["senha"])) {
+        $email = mysqli_real_escape_string($conexao, $_POST['email']);
+        $password = mysqli_real_escape_string($conexao, md5($_POST['senha']));
+
+        $sql = "SELECT * FROM usuario WHERE email = '" . $email . "' AND senha = '" . $password . "';";
+
+        $login = mysqli_query($conexao, $sql);
+        // Se encontrou o login/senha, loga...
+        if (mysqli_num_rows($login) > 0) {
+            $login = mysqli_fetch_array($login);
+            $_SESSION = array_merge($_SESSION, $login);
+
+            // redireciona, caso tenha parametro next_url
+            if (isset($_POST["next_url"])) header("Location: ".$_POST["next_url"]);
+
+        } else {
+            $login_incorreto = true;
+        }
+    }
+    */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,6 +91,7 @@
                 </li>
                  -->
             </ul>
+            <?php if (!isset($_SESSION['email'])) { ?>
             <form action="login.php" method="post" class="navbar-form navbar-right">
                 <div class="form-group">
                     <input type="text" name="email" placeholder="Email" class="form-control">
@@ -77,6 +104,12 @@
                     <a href="formulario_usuario.php"><button type="button" class="btn btn-danger">Cadastrar</button></a>
                 </div>
             </form>
+            <?php } else { ?>
+                <div class="pull-right">
+                    <p style="color: #fff; margin-top: 6px;">Olá <b><?php echo $_SESSION['email']; ?></b>, seja bem vindo(a)! &nbsp; <a class="btn btn-success" href="logout.php">Sair</a></p>
+                </div>
+            <?php  } ?>
         </div>
     </div>
+
 </nav>

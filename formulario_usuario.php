@@ -61,17 +61,13 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-md-3 control-label">Telefone</label>
-            <div class="col-md-9">
-                <input type="tel" required="required" maxlength="15" name="telefone" id="telefone"  />
-            </div>
-        </div>
-        <div class="form-group">
             <label class="col-md-3 control-label">Estado</label>
             <div class="col-md-9">
                 <input name="estado" type="text" id="estado" size="70" maxlength="70" required/>
             </div>
         </div>
+
+
         <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-9">
@@ -79,6 +75,7 @@
                 <input type="submit" value="                        " id="cadastrar" name="cadastrar" class="botao">
             </div>
         </div>
+</div>
 </div>
 
 <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">

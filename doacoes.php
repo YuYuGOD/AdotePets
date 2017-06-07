@@ -33,7 +33,8 @@ include("header.php");
 
                 $sql = "SELECT * FROM animal;";
 
-                $resultado = mysqli_query($conn, $sql);
+
+                $resultado = mysqli_query($conn, $sql, $sqi);
 
                 if (mysqli_num_rows($resultado) > 0) {
                   while($row = $resultado->fetch_assoc()) {?>
@@ -43,6 +44,7 @@ include("header.php");
                         <div class="panel panel-primary">
                           <div class="panel-heading"><?php echo $row['nome']?></div>
                           <div  class="panel-body"><img src="./<?php echo $row['foto_url']?>" class="img-responsive" style="width:100%" alt=""/></div>
+                          <div class="panel-footer"><?php echo $row['telefone_animal']?>  </div>
                           <div class="panel-footer"><?php echo $row['descricao']?>  </div>
                         </div>
                       </div>
